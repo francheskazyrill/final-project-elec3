@@ -1,5 +1,5 @@
 // Modern Weather App Logic
-const API_KEY = '908a8ce779112f82b5a252abb4ba675e';
+const API_KEY = 'YOUR_API_KEY_HERE';
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/';
 const searchForm = document.getElementById('search-form');
 const cityInput = document.getElementById('city');
