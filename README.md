@@ -49,7 +49,7 @@ This project is a collection of interactive web applications built by a solo stu
 ## How to Run the Project
 ### 1. Clone or Download
 ```
-git clone [your-repo-url]
+git clone https://github.com/francheskazyrill/final-project-elec3.git
 ```
 Or download the ZIP and extract it.
 
