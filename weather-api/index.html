@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather Now</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="page">
+		<div class="topbar">
+			<div class="brand">
+				<span class="dot"></span>
+				<span class="label">Weather Now</span>
+			</div>
+			<button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="true">🌙</button>
+		</div>
+		<header class="hero">
+			<div class="hero__text">
+				<h1 class="gradient-text">Find the weather, fast.</h1>
+				<form id="search-form" class="search">
+					<input id="city" name="city" type="text" placeholder="Search city..." autocomplete="off" required>
+					<button type="submit"><span>🔍</span></button>
+				</form>
+				<p class="status" id="status" role="status">Waiting for a city…</p>
+			</div>
+			<div class="hero__card" aria-live="polite">
+				<div class="card glass" id="card">
+					<div class="card__header">
+						<div>
+							<p class="eyebrow" id="location">—</p>
+							<p class="time" id="timestamp">—</p>
+						</div>
+						<div class="icon" id="icon" aria-hidden="true">☁️</div>
+					</div>
+					<div class="card__body">
+						<div class="temp" id="temp">--°</div>
+						<div class="summary" id="summary">No data yet</div>
+						<div class="details">
+							<div>
+								<p class="label">Feels like</p>
+								<p class="value" id="feels">—</p>
+							</div>
+							<div>
+								<p class="label">Humidity</p>
+								<p class="value" id="humidity">—</p>
+							</div>
+							<div>
+								<p class="label">Wind</p>
+								<p class="value" id="wind">—</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="forecast" aria-live="polite">
+			<div class="forecast__header">
+				<h2>5-day outlook</h2>
+				<p class="muted">Midday snapshot for the next five days.</p>
+			</div>
+			<div id="forecast-grid" class="forecast__grid">
+				<p class="muted">No forecast yet. Search a city to load one.</p>
+			</div>
+		</section>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

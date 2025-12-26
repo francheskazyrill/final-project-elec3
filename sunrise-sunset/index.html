@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise–Sunset Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="themeToggle" style="position:fixed;top:18px;right:18px;z-index:10;padding:10px 18px;border-radius:999px;border:none;background:#222;color:#fff;font-size:1.2rem;box-shadow:0 2px 8px #2222;cursor:pointer;">🌙</button>
+  <header>
+    <h1>🌅 Sunrise–Sunset Tracker</h1>
+    <p>Get sunrise/sunset times + visualize the day/night cycle</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <label>
+        Latitude:
+        <input type="number" id="latInput" step="0.0001" value="14.5995" />
+      </label>
+
+      <label>
+        Longitude:
+        <input type="number" id="lngInput" step="0.0001" value="120.9842" />
+      </label>
+
+      <button id="fetchBtn">Get Times</button>
+    </section>
+
+    <section class="card">
+      <h2>📍 Results</h2>
+      <p id="locationInfo"></p>
+
+      <div class="result-grid">
+        <div class="result-box"><strong>Sunrise:</strong> <span id="sunrise"></span></div>
+        <div class="result-box"><strong>Sunset:</strong> <span id="sunset"></span></div>
+        <div class="result-box"><strong>Solar Noon:</strong> <span id="solarNoon"></span></div>
+        <div class="result-box"><strong>Day Length:</strong> <span id="dayLength"></span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>🌞 Day/Night Visualization</h2>
+      <p class="hint">The sun icon shows the current position based on time.</p>
+
+      <div class="cycle-bar">
+        <div class="cycle-fill" id="cycleFill"></div>
+        <div class="sun-icon" id="sunIcon">☀️</div>
+      </div>
+
+      <div class="cycle-labels">
+        <span id="labelSunrise">Sunrise</span>
+        <span id="labelSunset">Sunset</span>
+      </div>
+
+      <p id="currentStatus" class="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>🌙 Extra Info</h2>
+      <div class="result-grid">
+        <div class="result-box"><strong>Civil Twilight Begin:</strong> <span id="civilBegin"></span></div>
+        <div class="result-box"><strong>Civil Twilight End:</strong> <span id="civilEnd"></span></div>
+        <div class="result-box"><strong>Nautical Twilight Begin:</strong> <span id="nauticalBegin"></span></div>
+        <div class="result-box"><strong>Nautical Twilight End:</strong> <span id="nauticalEnd"></span></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

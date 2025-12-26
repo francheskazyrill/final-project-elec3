@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <div class="backdrop" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+    </div>
+    <main class="layout">
+        <section class="panel intro">
+            <h1>Stopwatch</h1>
+        </section>
+
+        <section class="panel stopwatch" aria-label="Stopwatch">
+            <header class="heading">
+                <div class="time" data-time-display>
+                    <span data-part="hours">00</span>
+                    <span class="dot">:</span>
+                    <span data-part="minutes">00</span>
+                    <span class="dot">:</span>
+                    <span data-part="seconds">00</span>
+                    <span class="dot">:</span>
+                    <span data-part="milliseconds">00</span>
+                </div>
+            </header>
+
+            <div class="controls" data-controls>
+                <button type="button" data-action="start" class="btn primary">Start</button>
+                <button type="button" data-action="reset" class="btn ghost">Reset</button>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

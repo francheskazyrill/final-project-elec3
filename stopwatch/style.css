@@ -1,0 +1,66 @@
+/* Modern stopwatch styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.layout {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(60,60,120,0.12);
+  padding: 2rem;
+  max-width: 350px;
+  width: 100%;
+}
+.heading {
+  margin-bottom: 1rem;
+}
+.labels {
+  display: flex;
+  justify-content: space-between;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+.time {
+  font-size: 2.2rem;
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.dot {
+  color: #2563eb;
+  margin: 0 0.1em;
+}
+.controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn {
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  background: #f1f5f9;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(60,60,120,0.04);
+}
+.btn.primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn.ghost {
+  background: #f3f4f6;
+  color: #64748b;
+}
+.btn:active, .btn:focus {
+  background: #dbeafe;
+  outline: none;
+}

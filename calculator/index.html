@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <div class="backdrop" aria-hidden="true">
+        <span class="blob blob-a"></span>
+        <span class="blob blob-b"></span>
+    </div>
+    <main class="layout">
+        <section class="panel intro">
+            <h1>Calculator</h1>
+        </section>
+
+        <section class="panel calculator" aria-label="Calculator">
+            <header class="calc-header">
+                <div>
+                    <output class="expression" data-display aria-live="polite">0</output>
+                </div>
+            </header>
+
+            <div class="glass">
+                <div class="visor" aria-hidden="true"></div>
+                <div class="keypad" data-keypad>
+                    <button type="button" data-action="clear" class="key key-ghost">AC</button>
+                    <button type="button" data-operator="/" class="key key-operator">÷</button>
+                    <button type="button" data-operator="*" class="key key-operator">×</button>
+                    <button type="button" data-action="delete" class="key key-ghost">DEL</button>
+
+                    <button type="button" data-digit="7" class="key">7</button>
+                    <button type="button" data-digit="8" class="key">8</button>
+                    <button type="button" data-digit="9" class="key">9</button>
+                    <button type="button" data-operator="-" class="key key-operator">−</button>
+
+                    <button type="button" data-digit="4" class="key">4</button>
+                    <button type="button" data-digit="5" class="key">5</button>
+                    <button type="button" data-digit="6" class="key">6</button>
+                    <button type="button" data-operator="+" class="key key-operator">+</button>
+
+                    <button type="button" data-digit="1" class="key">1</button>
+                    <button type="button" data-digit="2" class="key">2</button>
+                    <button type="button" data-digit="3" class="key">3</button>
+                    <button type="button" data-action="decimal" class="key">.</button>
+
+                    <button type="button" data-digit="0" class="key key-wide">0</button>
+                    <button type="button" data-action="equals" class="key key-accent">=</button>
+                </div>
+            </div>
+            <p class="hint">Tip: use your keyboard numbers, Enter to evaluate, Esc to clear.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
